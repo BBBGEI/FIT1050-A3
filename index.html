@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+    
+<head>
+        <meta charset="UTF-8" />
+        <title>FIT1050 Web Fundamentals  A3</title>
+        <meta name="robots" content="noindex,nofollow">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link media="screen and (min-width:501px)" href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+
+
+<body>
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!--Nav Logo-->
+            <!--Logo is turned white in the css with a filter on dark mode-->
+            <a href="" class="cs-logo" aria-label="back to home">
+                <img src="images/Logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!--Navigation List-->
+            <nav class="cs-nav" role="navigation">
+                <!--Mobile Nav Toggle-->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link cs-active">
+                                Home
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link">
+                                About Us
+                            </a>
+                        </li>
+                        <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                        <li class="cs-li cs-dropdown" tabindex="0">
+                            <span class="cs-li-link">
+                                Menu
+                                <img class="cs-drop-icon"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg"
+                                    alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                            </span>
+                            <ul class="cs-drop-ul">
+                                <li class="cs-drop-li">
+                                    <a href="" class="cs-li-link cs-drop-link">Coffee</a>
+                                </li>
+                                <li class="cs-drop-li">
+                                    <a href="" class="cs-li-link cs-drop-link">Meal</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link">
+                                Location
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="cs-contact-group">
+                <a href="tel:+84 1985 33 999" class="cs-phone">
+                    <img class="cs-phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg"
+                        alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
+                    +61 492 269 000
+                </a>
+                <div class="cs-social">
+                    <a href="" class="cs-social-link">
+                        <img class="cs-social-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo"
+                            width="12" height="12" aria-hidden="true" decoding="async">
+                    </a>
+                    <a href="" class="cs-social-link">
+                        <img class="cs-social-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg" alt="logo"
+                            width="12" height="12" aria-hidden="true" decoding="async">
+                    </a>
+                    <a href="" class="cs-social-link">
+                        <img class="cs-social-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="logo"
+                            width="12" height="12" aria-hidden="true" decoding="async">
+                    </a>
+                    <a href="" class="cs-social-link">
+                        <img class="cs-social-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg" alt="logo"
+                            width="12" height="12" aria-hidden="true" decoding="async">
+                    </a>
+                </div>
+            </div>
+            <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+            <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+
+    <section id="hero-1785">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Best Chioce Of Coffee </span>
+                <h1 class="cs-title">Kefco Cafe Food Truck</h1>
+                <p class="cs-text">
+                    Not a day is perfect without starting from cuppa of Coffee
+                </p>
+                <div class="cs-button-group">
+                    <a href="" class="cs-button-solid cs-button1"> Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Image -->
+        <picture class="cs-background">
+            <img loading="lazy" decoding="async" src="images/coffee01.jpg" alt="field" width="1920" height="1200"
+                aria-hidden="true">
+        </picture>
+
+        <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-splatter2.svg"
+            alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
+        <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+        <img class="cs-graphic cs-graphic-dark"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-mode-splatter2.svg" alt="graphic"
+            height="161" width="1920" loading="lazy" decoding="async">
+    </section>
+
+
+    <!-- ============================================ -->
+    <!--                  Gallery                     -->
+    <!-- ============================================ -->
+
+    <section id="gallery-1716">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Menu</span>
+                <h2 class="cs-title">Today speical for you</h2>
+                <!--If you remove the cs-text, the rectangle shape will disappear.  If you need to remove it, transfer the :before and .cs-text:last-of-type styles to the cs-title on mobile and desktop-->
+                <p class="cs-text">
+                    Chefs choose the freshest ingredients every day!
+                </p>
+                <a href="" class="cs-button-solid">Go Menu</a>
+            </div>
+            <div class="cs-gallery">
+                <picture class="cs-picture">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="images/Hambuger.jpg">
+                    <img loading="lazy" decoding="async" src="images/Hambuger.jpg" alt="picture" width="480"
+                        height="549">
+                </picture>
+                <picture class="cs-picture">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="images/FishAndChips.jpg">
+                    <img loading="lazy" decoding="async" src="images/FishAndChips.jpg" alt="picture" width="480"
+                        height="549">
+                </picture>
+                <picture class="cs-picture">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="images/Coffee02.jpg">
+                    <img loading="lazy" decoding="async" src="images/Coffee02.jpg" alt="picture" width="480"
+                        height="549">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--             Side By Side Reverse             -->
+    <!-- ============================================ -->
+
+    <section id="sbsr-1217">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-image-group">
+                <!--Floating Box-->
+                <div class="cs-box">
+                    <img class="cs-icon" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/medal.svg" alt="icon" width="521"
+                        height="60" aria-hidden="true">
+                    <span class="cs-number">12+</span>
+                    <span class="cs-desc">Years of Experience</span>
+                </div>
+                <!--Big Background Image-->
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="images/work 1.webp">
+                    <source media="(min-width: 601px)" srcset="images/work 1.webp">
+                    <img loading="lazy" decoding="async" src="images/work 1.jpg" alt="meeting" width="522" height="560"
+                        aria-hidden="true">
+                </picture>
+                <!--Swirl-->
+                <img class="cs-graphic" loading="lazy" decoding="async"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/swirl.svg" alt="icon" width="715"
+                    height="715" aria-hidden="true">
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-content">
+                <span class="cs-topper">Our Food & Kitchen</span>
+                <h2 class="cs-title">Discover the ultimate culinary adventure with our food truck</h2>
+                <p class="cs-text">
+                    We bring gourmet flavors right to your neighborhood, serving a diverse menu crafted from the
+                    freshest ingredients. Whether you're craving savory delights or sweet treats, our food truck is your
+                    go-to destination for delicious, on-the-go dining. Follow us for daily updates!
+                </p>
+                <div class="cs-content-flair">
+                    <div class="cs-bar">
+                        <h3 class="cs-h3">
+                            Traditional Italian coffee craftsmanship
+
+                            <span class="cs-percentage"></span>
+                        </h3>
+                        <!--change the --progress number to match the percentage in cs-number-->
+                        <div class="cs-progress" aria-hidden="true">
+                            <span class="cs-progress-bar" style="--progress: 33%"></span>
+                        </div>
+                    </div>
+                    <div class="cs-bar">
+                        <h3 class="cs-h3">
+                            Our Plan
+                            <span class="cs-percentage"></span>
+                        </h3>
+                        <!--change the --progress number to match the percentage in cs-number-->
+                        <div class="cs-progress" aria-hidden="true">
+                            <span class="cs-progress-bar" style="--progress: 69%"></span>
+                        </div>
+                    </div>
+                    <div class="cs-bar">
+                        <h3 class="cs-h3">
+                            About Us
+                            <span class="cs-percentage"></span>
+                        </h3>
+                        <!--change the --progress number to match the percentage in cs-number-->
+                        <div class="cs-progress" aria-hidden="true">
+                            <span class="cs-progress-bar" style="--progress: 100%"></span>
+                        </div>
+                    </div>
+                </div>
+                <a class="cs-button-solid" aria-label="learn more about our programs" href="">Find More</a>
+            </div>
+        </div>
+    </section>
+
+<!-- ============================================ -->
+<!--                    Menu                      -->
+<!-- ============================================ -->
+
+<section id="menu-1001">
+    <div class="cs-container">
+        <div class="cs-content">
+            <picture class="cs-wrapper" aria-hidden="true">
+                <img class="cs-decal" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/decal1.svg" decoding="async" alt="decal" width="181" height="36">
+            </picture>
+            <h2 class="cs-title">Our Specials</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="images/buger001.jpg" data-fancybox="gallery">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="images/buger001.jpg">
+                        <source media="(min-width: 601px)" srcset="images/buger001.jpg">
+                        <img loading="lazy" decoding="async" src="images/buger001.jpg" alt="food" width="160" height="160">
+                    </picture>
+                </a>
+                <div class="cs-info">
+                    <h3 class="cs-h3">
+                        <span class="cs-name">Beef Burger</span>
+                        <span class="cs-price">$12</span>
+                    </h3>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <a href="images/buger002.jpg" data-fancybox="gallery">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="images/buger002.jpg">
+                        <source media="(min-width: 601px)" srcset="images/buger002.jpg">
+                        <img loading="lazy" decoding="async" src="images/buger002.jpg" alt="food" width="160" height="160">
+                    </picture>
+                </a>
+                <div class="cs-info">
+                    <h3 class="cs-h3">
+                        <span class="cs-name">Chicken Burger</span>
+                        <span class="cs-price">$12</span>
+                    </h3>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <a href="images/chips.jpg" data-fancybox="gallery">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="images/chips.jpg">
+                        <source media="(min-width: 601px)" srcset="images/chips.jpg">
+                        <img loading="lazy" decoding="async" src="images/chips.jpg" alt="food" width="160" height="160">
+                    </picture>
+                </a>
+                <div class="cs-info">
+                    <h3 class="cs-h3">
+                        <span class="cs-name">Fish and Chips</span>
+                        <span class="cs-price">$9</span>
+                    </h3>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <a href="images/sandwithc.jpg" data-fancybox="gallery">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="images/sandwithc.jpg">
+                        <source media="(min-width: 601px)" srcset="images/sandwithc.jpg">
+                        <img loading="lazy" decoding="async" src="images/sandwithc.jpg" alt="food" width="160" height="160">
+                    </picture>
+                </a>
+                <div class="cs-info">
+                    <h3 class="cs-h3">
+                        <span class="cs-name">Sandwich</span>
+                        <span class="cs-price">$10</span>
+                    </h3>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <a href="images/long black.jpg" data-fancybox="gallery" data-caption="Long black">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="images/long black.jpg">
+                        <source media="(min-width: 601px)" srcset="images/long black.jpg">
+                        <img loading="lazy" decoding="async" src="images/long black.jpg" alt="food" width="160" height="160">
+                    </picture>
+                </a>
+                <div class="cs-info">
+                    <h3 class="cs-h3">
+                        <span class="cs-name">Long Black</span>
+                        <span class="cs-price">$4</span>
+                    </h3>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <a href="images/latte.jpg" data-fancybox="gallery">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="images/latte.jpg">
+                        <source media="(min-width: 601px)" srcset="images/latte.jpg">
+                        <img loading="lazy" decoding="async" src="images/latte.jpg" alt="food" width="160" height="160">
+                    </picture>
+                </a>
+                <div class="cs-info">
+                    <h3 class="cs-h3">
+                        <span class="cs-name">Latte</span>
+                        <span class="cs-price">$4</span>
+                    </h3>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <a href="" class="cs-button-solid">Reserve Your Table</a>
+    </div>
+    <!--Static background is in CSS as a tiled pattern-->
+</section>
+
+
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+
+    <footer id="cs-footer-308">
+        <div class="cs-container">
+            <!-- Logo Group -->
+            <div class="cs-logo-group">
+                <a aria-label="go back to home" class="cs-logo" href="">
+                    <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="images/Logo.png"
+                        alt="logo" width="178" height="32">
+                </a>
+                <p class="cs-text">
+                    Welcome
+                </p>
+            </div>
+            <!-- Links -->
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header">Sitemap</span>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">About</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Menu</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">About Us</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Contact</a>
+                </li>
+            </ul>
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header">Categories</span>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Buger</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Fish and Chips</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Coffee</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Family Meal</a>
+                </li>
+            </ul>
+            <!-- Contact Info -->
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header">Contact</span>
+                </li>
+                <li class="cs-nav-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-stroke.svg" alt="phone"
+                        width="24" height="24">
+                    <a class="cs-nav-link cs-phone" href="tel: 123-456-7890">+61 492 269 000</a>
+                </li>
+                <li class="cs-nav-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/email-stroke.svg" alt="email"
+                        width="24" height="24">
+                    <a class="cs-nav-link cs-email" href="mailto:info@codestitch.com">info@Kefco.com</a>
+                </li>
+                <li class="cs-nav-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-stroke.svg" alt="pin" width="24"
+                        height="24">
+                    <a class="cs-nav-link cs-address" href="" target="_blank" rel="noopener">
+                        Oaklelgh Business Park<br> Oaklelgh South, VIC 3167
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-bottom">
+            <span class="cs-copyright">© Copyright 2024 - <a class="cs-copyright-link" href=""> Kefco Cafe
+                </a></span>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
